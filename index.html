@@ -9,11 +9,15 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
             max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
+            margin: 0 auto;
+            padding: 40px 20px;
             color: #24292e;
             position: relative;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centers the whole layout vertically if screen is large */
+            box-sizing: border-box;
         }
 
         /* Fullscreen Soft Background Image Layer */
@@ -25,24 +29,37 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background-image: url('AZO_01.png'); /* Upload your picture named background.jpg */
+            background-image: url('background.jpg');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            filter: blur(12px) brightness(1.05); /* Softens details and keeps contrast crisp */
-            opacity: 0.35; /* Blends nicely into the page background */
+            filter: blur(8px) brightness(0.9); /* Subtle blur keeps form while protecting legibility */
+        }
+
+        /* Elegant Top Header Glass Card */
+        .header-container {
+            text-align: left;
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         }
 
         h1 {
-            color: #1a1e22;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-            padding-bottom: 10px;
+            color: #ffffff; /* White text stands out sharply against the top sky section */
+            margin: 0 0 5px 0;
             font-size: 2.2rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         p {
             font-size: 1.1rem;
-            color: #444;
+            color: #f0f3f6; /* Brightened subtitle text */
+            margin: 0;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         /* Premium Floating Table Card */
@@ -50,28 +67,28 @@
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
-            margin-top: 30px;
-            background-color: rgba(255, 255, 255, 0.85); /* Semitransparent white */
-            backdrop-filter: blur(5px); /* Extra fallback softening layer behind data */
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.88); /* Clean, protective semi-transparent white */
+            backdrop-filter: blur(15px); 
             border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.6);
         }
 
         th, td {
             padding: 16px;
             text-align: left;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         th {
-            background-color: rgba(246, 248, 252, 0.9);
-            color: #24292e;
-            font-weight: 600;
+            background-color: rgba(246, 248, 252, 0.95);
+            color: #333;
+            font-weight: 700;
             text-transform: uppercase;
             font-size: 0.85rem;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.6px;
         }
 
         tr:last-child td {
@@ -79,7 +96,7 @@
         }
 
         tr:hover {
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(255, 255, 255, 0.98);
         }
 
         td strong {
@@ -89,27 +106,29 @@
         .btn-youtube {
             display: inline-block;
             padding: 8px 16px;
-            background-color: #ff0000; /* YouTube Red */
+            background-color: #ff0000;
             color: white;
             text-decoration: none;
             border-radius: 6px;
             font-size: 14px;
             font-weight: bold;
-            box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);
+            box-shadow: 0 3px 10px rgba(255, 0, 0, 0.25);
             transition: all 0.2s ease;
         }
 
         .btn-youtube:hover {
             background-color: #cc0000;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
         }
     </style>
 </head>
 <body>
 
-    <h1>Centro Cultural Azotea - Video Playlists</h1>
-    <p>Select a playlist below to open it directly in YouTube.</p>
+    <div class="header-container">
+        <h1>Centro Cultural Azotea - Video Playlists</h1>
+        <p>Select a playlist below to open it directly in YouTube.</p>
+    </div>
 
     <table>
         <thead>
