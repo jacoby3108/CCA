@@ -11,42 +11,98 @@
             max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
-            color: #333;
-        }
-        h1 {
             color: #24292e;
-            border-bottom: 2px solid #eaecef;
-            padding-bottom: 10px;
+            position: relative;
+            min-height: 100vh;
         }
+
+        /* Fullscreen Soft Background Image Layer */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('background.jpg'); /* Upload your picture named background.jpg */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            filter: blur(12px) brightness(1.05); /* Softens details and keeps contrast crisp */
+            opacity: 0.35; /* Blends nicely into the page background */
+        }
+
+        h1 {
+            color: #1a1e22;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+            padding-bottom: 10px;
+            font-size: 2.2rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        /* Premium Floating Table Card */
         table {
             width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 30px;
+            background-color: rgba(255, 255, 255, 0.85); /* Semitransparent white */
+            backdrop-filter: blur(5px); /* Extra fallback softening layer behind data */
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
+
         th, td {
-            padding: 12px;
+            padding: 16px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         }
+
         th {
-            background-color: #f6f8fa;
+            background-color: rgba(246, 248, 252, 0.9);
             color: #24292e;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
         }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
         tr:hover {
-            background-color: #f1f3f5;
+            background-color: rgba(255, 255, 255, 0.95);
         }
+
+        td strong {
+            color: #111;
+        }
+
         .btn-youtube {
             display: inline-block;
-            padding: 6px 12px;
+            padding: 8px 16px;
             background-color: #ff0000; /* YouTube Red */
             color: white;
             text-decoration: none;
             border-radius: 6px;
             font-size: 14px;
             font-weight: bold;
+            box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);
+            transition: all 0.2s ease;
         }
+
         .btn-youtube:hover {
             background-color: #cc0000;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -66,7 +122,6 @@
         </thead>
         <tbody>
             
-            <!-- Playlist 1 -->
             <tr>
                 <td>1</td>
                 <td><strong>Videos 2020</strong></td>
@@ -74,58 +129,49 @@
                 <td><a href="https://www.youtube.com/playlist?list=PLY6MZN2qVDWoLJNLvAx-_dXZQA1jsB1yP" class="btn-youtube" target="_blank">Ver videos ↗</a></td>
             </tr>
 
-            <!-- Playlist 2 -->
-           <tr>
+            <tr>
                 <td>2</td>
                 <td><strong>Videos 2021</strong></td>
                 <td>2026-05-30</td>
                 <td><a href="https://www.youtube.com/playlist?list=PLY6MZN2qVDWrh0P1Lh1NQ4M5ku1bUWT2p" class="btn-youtube" target="_blank">Ver videos ↗</a></td>
             </tr>
 
-
-            <!-- Playlist 3 -->
-           <tr>
+            <tr>
                 <td>3</td>
                 <td><strong>Videos 2022</strong></td>
                 <td>2026-05-30</td>
                 <td><a href="https://www.youtube.com/playlist?list=PLY6MZN2qVDWqam7l8XrcLrBQjiNiejduL" class="btn-youtube" target="_blank">Ver videos ↗</a></td>
             </tr>
 
-            <!-- Playlist 4 -->
-           <tr>
+            <tr>
                 <td>4</td>
                 <td><strong>Videos 2023</strong></td>
                 <td>2026-05-30</td>
                 <td><a href="https://www.youtube.com/playlist?list=PLY6MZN2qVDWoDk6lfSRtUTCm5bkGRu3Te" class="btn-youtube" target="_blank">Ver videos ↗</a></td>
             </tr>
 
-            <!-- Playlist 5 -->
-           <tr>
+            <tr>
                 <td>5</td>
                 <td><strong>Videos 2024</strong></td>
                 <td>2026-05-30</td>
                 <td><a href="https://www.youtube.com/playlist?list=PLY6MZN2qVDWpJjFsX4xi9bdJo8eeuV9_9" class="btn-youtube" target="_blank">Ver videos ↗</a></td>
             </tr>
 
-           <!-- Playlist 6 -->
-           <tr>
+            <tr>
                 <td>6</td>
                 <td><strong>Videos 2025</strong></td>
                 <td>2026-05-30</td>
                 <td><a href="https://www.youtube.com/playlist?list=PLY6MZN2qVDWr3mzmpXjFut6jFDxk5KTtR" class="btn-youtube" target="_blank">Ver videos ↗</a></td>
             </tr>
 
-             <!-- Playlist 7 -->
-           <tr>
+             <tr>
                 <td>7</td>
                 <td><strong>Videos 2026</strong></td>
                 <td>2026-05-30</td>
                 <td><a href="https://www.youtube.com/playlist?list=PLY6MZN2qVDWqNVclqzdrqLNn7gulQYLAM" class="btn-youtube" target="_blank">Ver videos ↗</a></td>
             </tr>
 
-            <!-- To add a new playlist in the future, copy from here down to </tr> and paste it below -->
-
-        </tbody>
+            </tbody>
     </table>
 
 </body>
